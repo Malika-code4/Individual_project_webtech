@@ -7,7 +7,7 @@
  */
 
 // Define constants
-define('DB_HOST', '169.239.251.102:34');
+define('DB_HOST', '169.239.251.102:3306');
 define('DB_NAME', 'webtech_2025A_fannareme_abdou');
 define('DB_USER', 'fannareme.abdou');
 define('DB_PASS', 'fa889033');

@@ -261,10 +261,24 @@ class Auth {
         }
 
         // Set session lifetime
+        // Set session lifetime
         if ($rememberMe) {
             // Remember for 30 days
-            ini_set('session.gc_maxlifetime', 30 * 24 * 60 * 60);
-            session_set_cookie_params(30 * 24 * 60 * 60);
+            // Note: We cannot use session_set_cookie_params after session_start
+            // So we manually extend the cookie lifetime
+            $params = session_get_cookie_params();
+            setcookie(
+                session_name(),
+                session_id(),
+                [
+                    'expires' => time() + (30 * 24 * 60 * 60),
+                    'path' => $params['path'],
+                    'domain' => $params['domain'],
+                    'secure' => $params['secure'],
+                    'httponly' => $params['httponly'],
+                    'samesite' => $params['samesite'] ?? 'Lax'
+                ]
+            );
         }
 
         return $sessionToken;

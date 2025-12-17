@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Memory Master - App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Heads-Up Display -->
+        <header>
+            <div class="app-brand">
+                <span>⚡</span>
+                <h1>Memory Master</h1>
+            </div>
+            <div class="hud-stats" id="soloStats">
+                <div class="hud-item">
+                    <span id="timeCount" class="hud-value">0:00</span>
+                    <span class="hud-label">Time</span>
+                </div>
+                <div class="hud-item">
+                    <span id="movesCount" class="hud-value">0</span>
+                    <span class="hud-label">Moves</span>
+                </div>
+                <div class="hud-item">
+                    <span id="pairsCount" class="hud-value">0</span>
+                    <span class="hud-label">Pairs</span>
+                </div>
+            </div>
+
+            <div class="vs-scoreboard" id="vsStats" style="display:none;">
+                <div class="score-box active-turn" id="p1ScoreBox">
+                    <span class="hud-label" style="color:var(--color-primary)">YOU</span>
+                    <span id="p1Score" class="score-big" style="color:var(--color-primary)">0</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="score-box" id="p2ScoreBox">
+                    <span id="p2Name" class="hud-label" style="color:var(--color-secondary)">CPU</span>
+                    <span id="p2Score" class="score-big" style="color:var(--color-secondary)">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <!-- Top Controls -->
+            <div class="sidebar">
+                <div class="player-bubble" onclick="openProfileModal()">
+                    <div id="playerAvatar" class="avatar-mini">?</div>
+                    <span id="playerName" style="font-size:0.9rem; font-weight:600">Guest</span>
+                </div>
+
+                <!-- New Mode Selector Wrapper -->
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="solo">Solo</button>
+                    <button class="mode-btn" data-mode="cpu">Comp</button>
+                    <button class="mode-btn" data-mode="local">1v1</button>
+
+                </div>
+
+                <div class="difficulty-pill">
+                    <button class="difficulty-btn active" data-grid="16">Easy</button>
+                    <button class="difficulty-btn" data-grid="24">Med</button>
+                    <button class="difficulty-btn" data-grid="36">Hard</button>
+                </div>
+
+                <div class="nav-links"
+                    style="margin-top:auto; display:flex; flex-direction:column; gap:0.5rem; width:100%">
+                    <a href="help.html" class="difficulty-btn"
+                        style="text-decoration:none; text-align:center; display:block">Help</a>
+                    <a href="about.html" class="difficulty-btn"
+                        style="text-decoration:none; text-align:center; display:block">About</a>
+                    <a href="contact.html" class="difficulty-btn"
+                        style="text-decoration:none; text-align:center; display:block">Contact</a>
+                </div>
+
+                <button id="logoutBtn" class="difficulty-btn" style="color:var(--error); margin-top:1rem">Exit</button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="game-content-wrapper">
+                <!-- 3D Game Board -->
+                <div class="game-area">
+                    <div id="gameBoard" class="grid grid-4x4">
+                        <!-- Cards -->
+                        <div style="color:white; grid-column:1/-1; text-align:center;">Select "Start Game"</div>
+                    </div>
+                </div>
+
+                <!-- Bottom Action -->
+                <div class="action-bar">
+                    <button id="showLeaderboardBtn" class="difficulty-btn"
+                        style="background:rgba(255,255,255,0.1); color:white; padding:1rem 2rem; border-radius:50px">🏆
+                        Leaderboard</button>
+                    <button id="newGameBtn" class="btn-game">START GAME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="victoryModal">
+            <div class="modal-icon">🏆</div>
+            <h2>VICTORY!</h2>
+            <div style="margin:2rem 0">
+                <p style="color:#aaa; text-transform:uppercase; font-size:0.8rem">Final Score</p>
+                <div id="finalScore" class="score-display">0</div>
+            </div>
+            <div style="display:flex; gap:1rem; justify-content:center; margin-top:2rem;">
+                <button id="playAgainBtn" class="btn-game">PLAY NEW GAME</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Leaderboard Modal -->
+    <div class="modal-overlay" id="leaderboardModal">
+        <div class="modal" style="max-width:600px; width:95%;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem">
+                <h2 style="font-size:1.8rem; margin:0">🏆 Leaderboard</h2>
+                <button onclick="hideLeaderboard()"
+                    style="background:none; border:none; color:white; font-size:1.5rem; cursor:pointer">&times;</button>
+            </div>
+
+            <div class="difficulty-pill" style="margin:0 auto 1.5rem; width:fit-content">
+                <button class="difficulty-btn active" onclick="loadLeaderboard(16)">Easy</button>
+                <button class="difficulty-btn" onclick="loadLeaderboard(24)">Med</button>
+                <button class="difficulty-btn" onclick="loadLeaderboard(36)">Hard</button>
+            </div>
+
+            <div class="table-wrapper"
+                style="max-height:300px; overflow-y:auto; border-radius:12px; border:1px solid rgba(255,255,255,0.1)">
+                <table style="width:100%; border-collapse:collapse; color:white">
+                    <thead style="background:rgba(255,255,255,0.05); position:sticky; top:0">
+                        <tr>
+                            <th style="padding:1rem; text-align:left">Rank</th>
+                            <th style="padding:1rem; text-align:left">Player</th>
+                            <th style="padding:1rem; text-align:center">Score</th>
+                            <th style="padding:1rem; text-align:right">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                        <!-- Rows populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Edit Modal -->
+    <div class="modal-overlay" id="profileModal">
+        <div class="modal profile-modal-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem">
+                <h2 style="font-size:1.5rem; margin:0">Edit Profile</h2>
+                <button onclick="closeProfileModal()"
+                    style="background:none; border:none; color:white; font-size:1.5rem; cursor:pointer">&times;</button>
+            </div>
+
+            <form onsubmit="handleProfileUpdate(event)">
+                <div class="avatar-upload" onclick="document.getElementById('editAvatar').click()">
+                    <div id="avatarPreview" class="avatar-preview">?</div>
+                    <div class="avatar-edit-icon">✏️</div>
+                    <input type="file" id="editAvatar" accept="image/*" style="display:none">
+                </div>
+
+                <div style="margin-bottom:1.5rem">
+                    <label style="display:block; margin-bottom:0.5rem; color:#aaa; font-size:0.9rem">Username</label>
+                    <input type="text" id="editUsername" class="input-field"
+                        style="width:100%; padding:0.8rem; border-radius:12px; border:1px solid rgba(255,255,255,0.1); background:rgba(0,0,0,0.2); color:white"
+                        required>
+                </div>
+
+                <button type="submit" class="btn-game" style="width:100%; font-size:1rem; padding:0.8rem">SAVE
+                    CHANGES</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

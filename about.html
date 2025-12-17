@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Memory Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .dev-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(78, 205, 196, 0.1);
+        }
+
+        .dev-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #333;
+            margin: 0 auto 1.5rem;
+            border: 3px solid #4ecdc4;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 0.2rem;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            text-decoration: none;
+            color: white;
+            display: flex;
+    </style>
+</head>
+
+<body style="overflow-y:auto">
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <a href="landing.html" class="nav-brand">
+            <span>⚡</span> Memory Master
+        </a>
+        <div class="nav-menu">
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="help.html" class="nav-link">How to Play</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <a href="index.html" class="btn-nav-cta">Back to Game</a>
+    </nav>
+
+    <div class="container" style="display:block; padding-top:2rem">
+
+        <div class="page-content" style="padding-top:4rem">
+
+            <div class="mission-box">
+                <h1 style="margin-bottom:1rem">Our Mission & Vision</h1>
+                <p style="font-size:1.1rem; color:#ccc; line-height:1.6">
+                    "To create the most engaging and aesthetically pleasing brain-training experiences on the web. We
+                    believe that sharpening your memory should be fun, competitive, and accessible to everyone,
+                    everywhere."
+                </p>
+            </div>
+
+            <h2 style="margin-bottom:2rem">The Developer</h2>
+
+            <div class="dev-card">
+                <div class="dev-img" style="background-image: url('Moi.jpg'); border: 3px solid #4ecdc4;"></div>
+                <h3 style="font-size:1.5rem; margin:0 0 0.5rem 0">Nana Malika</h3>
+                <p style="color:#4ecdc4; margin-bottom:1.5rem">Full Stack Developer</p>
+
+                <p style="color:#aaa; font-size:0.9rem; margin-bottom:1.5rem">
+                    Passionate about building interactive web experiences with modern technologies and clean design.
+                </p>
+
+                <div>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">UI/UX</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

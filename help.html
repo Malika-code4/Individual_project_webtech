@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - Memory Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+
+        h2 {
+            color: #4ecdc4;
+            margin-top: 2rem;
+        }
+
+        ul {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="overflow-y:auto">
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <a href="landing.html" class="nav-brand">
+            <span>⚡</span> Memory Master
+        </a>
+        <div class="nav-menu">
+            <a href="about.html" class="nav-link">About</a>
+            <a href="help.html" class="nav-link active">How to Play</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <a href="index.html" class="btn-nav-cta">Back to Game</a>
+    </nav>
+
+    <div class="container" style="display:block; padding-top:2rem">
+
+        <header style="text-align:center; padding-top:4rem">
+            <h1 style="font-size:3rem; margin:0">How to Play</h1>
+            <p style="color:#aaa">Master the art of memory</p>
+        </header>
+
+        <div class="page-content">
+            <h2>🏆 The Object of the Game</h2>
+            <p>The goal is simple: Find all the matching pairs of cards. Flip over two cards at a time to reveal the
+                symbols hidden underneath.</p>
+
+            <h2>🎮 Game Modes</h2>
+            <ul>
+                <li><strong>Solo Mode:</strong> Challenge yourself to clear the board in the fewest moves and fastest
+                    time possible.</li>
+                <li><strong>Comp (CPU):</strong> Play against a smart AI bot. It has a memory, so watch out!</li>
+                <li><strong>1v1 (Local):</strong> Pass the device back and forth with a friend.</li>
+
+            </ul>
+
+            <h2>📝 Rules</h2>
+            <ol>
+                <li>Click on a card to flip it over.</li>
+                <li>Click a second card to try and find the match.</li>
+                <li>If they match, you get a point and (in VS modes) you get to go again!</li>
+                <li>If they don't match, remember what you saw! They will flip back over.</li>
+                <li>The game ends when all pairs are found.</li>
+            </ol>
+
+            <h2>⚡ Scoring</h2>
+            <p>Your score is calculated based on:</p>
+            <ul>
+                <li><strong>Moves:</strong> Fewer moves = Higher score.</li>
+                <li><strong>Time:</strong> Faster completion = Bonus points.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

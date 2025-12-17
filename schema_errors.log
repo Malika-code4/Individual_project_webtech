@@ -1,0 +1,8 @@
+[10-Dec-2025 10:06:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Database::getInstance() in C:\xampp__\htdocs\Individual_project_webtech\update_schema_profile.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\xampp__\htdocs\Individual_project_webtech\update_schema_profile.php on line 13
+[11-Dec-2025 04:30:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Database::getInstance() in C:\xampp__\htdocs\Individual_project_webtech\update_schema_profile.php:13
+Stack trace:
+#0 {main}
+  thrown in C:\xampp__\htdocs\Individual_project_webtech\update_schema_profile.php on line 13

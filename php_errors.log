@@ -1,0 +1,51 @@
+[09-Dec-2025 17:59:31 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[09-Dec-2025 17:59:31 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[09-Dec-2025 18:04:41 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[09-Dec-2025 18:04:41 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[09-Dec-2025 21:48:20 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[09-Dec-2025 21:48:20 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[09-Dec-2025 22:27:12 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[09-Dec-2025 22:27:12 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[09-Dec-2025 23:55:57 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[09-Dec-2025 23:55:57 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[09-Dec-2025 23:58:44 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[09-Dec-2025 23:58:44 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[10-Dec-2025 09:06:08 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[10-Dec-2025 09:06:08 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[10-Dec-2025 09:08:27 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[10-Dec-2025 09:08:27 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[10-Dec-2025 10:16:54 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[10-Dec-2025 10:16:54 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[10-Dec-2025 10:32:38 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[10-Dec-2025 10:32:38 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[10-Dec-2025 10:32:53 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[10-Dec-2025 10:32:53 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[10-Dec-2025 11:00:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getDBConnection() in C:\xampp__\htdocs\Individual_project_webtech\update_schema_multiplayer.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\xampp__\htdocs\Individual_project_webtech\update_schema_multiplayer.php on line 5
+[10-Dec-2025 11:07:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getDBConnection() in C:\xampp__\htdocs\Individual_project_webtech\update_schema_multiplayer.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\xampp__\htdocs\Individual_project_webtech\update_schema_multiplayer.php on line 9
+[10-Dec-2025 18:03:40 Europe/Berlin] Create Game Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`memory_card_game`.`games`, CONSTRAINT `games_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`player_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[10-Dec-2025 18:03:42 Europe/Berlin] Create Game Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`memory_card_game`.`games`, CONSTRAINT `games_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`player_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[10-Dec-2025 18:40:51 Europe/Berlin] Create Game Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`memory_card_game`.`games`, CONSTRAINT `games_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`player_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[10-Dec-2025 18:40:52 Europe/Berlin] Create Game Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`memory_card_game`.`games`, CONSTRAINT `games_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`player_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[10-Dec-2025 18:40:53 Europe/Berlin] Create Game Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`memory_card_game`.`games`, CONSTRAINT `games_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`player_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[10-Dec-2025 18:40:56 Europe/Berlin] Create Game Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`memory_card_game`.`games`, CONSTRAINT `games_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`player_id`) ON DELETE SET NULL ON UPDATE CASCADE)
+[11-Dec-2025 03:34:25 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[11-Dec-2025 03:34:25 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[11-Dec-2025 03:37:29 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[11-Dec-2025 03:37:29 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[11-Dec-2025 03:55:55 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[11-Dec-2025 03:55:55 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[11-Dec-2025 04:06:00 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[11-Dec-2025 04:06:00 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[11-Dec-2025 04:29:17 Europe/Berlin] Update Player Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profile_picture' in 'field list'
+[11-Dec-2025 21:04:15 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[11-Dec-2025 21:04:15 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[11-Dec-2025 22:03:54 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[11-Dec-2025 22:03:54 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267
+[12-Dec-2025 01:26:16 Europe/Berlin] PHP Warning:  ini_set(): Session ini settings cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 266
+[12-Dec-2025 01:26:16 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp__\htdocs\Individual_project_webtech\auth.php on line 267

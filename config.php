@@ -7,10 +7,10 @@
  */
 
 // Define constants
-define('DB_HOST', '169.239.251.102:3306');
-define('DB_NAME', 'webtech_2025A_fannareme_abdou');
-define('DB_USER', 'fannareme.abdou');
-define('DB_PASS', 'fa889033');
+define('DB_HOST', '169.239.251.102:341');
+define('DB_NAME', 'webtech_2025A_ousmane_bako');
+define('DB_USER', 'ousmane.bako');
+define('DB_PASS', 'Ousmane07');
 
 // Disable error reporting to browser (prevent breaking JSON)
 error_reporting(E_ALL);
@@ -18,7 +18,7 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', 'php_errors.log');
 
-// Start output buffering to catch unwanted whitespace/output
+// Start output buffering to catch unwanted whitespace/output   
 ob_start();
 
 // ============================================================================

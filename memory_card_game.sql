@@ -12,7 +12,7 @@
 
 
 -- Use the database
-USE webtech_2025A_fannareme_abdou;
+USE webtech_2025A_ousmane_bako;
 
 -- ============================================================================
 -- Table: players
@@ -158,20 +158,7 @@ INSERT INTO statistics (player_id, total_games, total_wins, average_moves, avera
 
 
 
--- View: Recent High Scores
-CREATE VIEW vw_recent_high_scores AS
-SELECT 
-    hs.score_id,
-    p.username,
-    hs.score,
-    hs.grid_size,
-    hs.total_moves,
-    hs.time_elapsed,
-    hs.created_at
-FROM high_scores hs
-INNER JOIN players p ON hs.player_id = p.player_id
-ORDER BY hs.created_at DESC
-LIMIT 10;
+
 
 -- View: Game Statistics Dashboard
 CREATE VIEW vw_game_statistics AS

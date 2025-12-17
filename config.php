@@ -10,11 +10,11 @@
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'webtech_2025A_ousmane_bako');
 define('DB_USER', 'ousmane.bako');
-define('DB_PASS', 'Ousmane07');
+define('DB_PASS', 'Ousou2004');
 
 // Disable error reporting to browser (prevent breaking JSON)
 error_reporting(E_ALL);
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'php_errors.log');
 
